@@ -11,37 +11,37 @@ html, body {
 .container {
 	max-width: 80%;
 	margin: 30px auto;
-	background: #f1f1f1;
+	background: #e9e6e6;
 	padding: 10px;
 }
 
 
 button {
 	background: none;
-	border: 1px solid black;
+	border: 1px solid rgb(105, 103, 235);
 	border-radius: 4px;
 	padding: 20px 40px;
 	font-size: 1rem;
 }
 
 button:hover {
-	background: orangered;
+	background: rgb(205, 233, 233);
 }
 
 button:active {
-	background: #000;
+	background: rgb(136, 131, 131);
 	color: #fff;
 }
 
 .slider {
-	border: 2px solid black;
+	border: 2px solid rgb(121, 113, 113);
 	width: 500px;
 	height: 500px;
 	margin: 20px auto;
 	overflow: hidden;
 	}
 
-.slider-line {
+.slider__line {
 	width:500px;
 	height: 500px;
 	display: flex;
@@ -49,7 +49,7 @@ button:active {
 	left: 0;
 	transition: all ease 1s;
 }
-.slider-img {
+.slider__img {
 	width: 500px;
 	height: 500px;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,23 @@
 	<title>Погода</title>
 	<link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-<div class="wrapper">
-	<div id="weather" class="weather"></div>
-</div>
-<script src="./script.js"></script>
+	<div class="wrapper">
+		<section class="input-part">
+			<p class="info-txt"></p>
+			<div class="content">
+				<input type="text" spellcheck="false" placeholder="Enter city name" required>
+				<div class="separator"></div>
+				<button>Get Device Location</button>
+			</div>
+		</section>
+		<div id="weather" class="weather">
+
+			
+		</div>
+	</div>
+	<script src="./script.js"></script>
 </body>
+
 </html>

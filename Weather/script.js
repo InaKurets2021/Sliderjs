@@ -1,4 +1,8 @@
-"use strict"
+const wrapper = document.querySelector(".wrapper"),
+	inputPart = document.querySelector(".input-part"),
+	infoTxt = inputPart.querySelector(".info-txt"),
+	inputField = inputPart.querySelector("input"),
+	locationBtn = inputPart.querySelector("button");
 
 //Блок с погодой
 const weatherBlock = document.querySelector('#weather');
@@ -8,8 +12,8 @@ async function loadWeather(e) {
 		<div class="weather__loading">
 			<img src="./img/g0R9.gif" alt="Loading...">
 		</div>`;
-	
-	const server = 	'https://api.openweathermap.org/data/2.5/weather?units=metric&q=Minsk&appid=522f7ec766b55c89fccbc47a4e7a72c0';
+
+	const server = 'https://api.openweathermap.org/data/2.5/weather?units=metric&q=Minsk&appid=522f7ec766b55c89fccbc47a4e7a72c0';
 
 	const response = await fetch(server, {
 		method: 'GET',
@@ -24,7 +28,7 @@ async function loadWeather(e) {
 }
 
 function getWeather(data) {
-		//обрабатываем видимые данные
+	//обрабатываем видимые данные
 	const location = data.name;
 	const temp = Math.round(data.main.temp);
 	const feelsLike = Math.round(data.main.feels_like);
@@ -50,3 +54,33 @@ function getWeather(data) {
 if (weatherBlock) {
 	loadWeather();
 }
+
+
+/*button
+
+inputPart = document.querySelector(".input-part"),
+	infoTxt = document.querySelector(".info-txt"),
+	inputField = document.querySelector("input"),
+	locationBtn = document.querySelector("button");
+
+let api;
+
+inputField.addEventListener("keyup", e => {
+	if (e.key == "Enter" && inputField.value != "") {
+		requestApi(inputField.value);
+	}
+});
+
+locationBtn.addEventListener("click", () => {
+	if () {
+	};
+} else {
+		
+}
+);
+
+function requestApi(city) {
+	api = `https://api.openweathermap.org/data/2.5/weather?q=${Minsk}&units=metric&appid=74d998dbd85c36a6740e6ab3dbe0a454`;
+	fetchData();
+}
+;*/
